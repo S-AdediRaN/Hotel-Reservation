@@ -184,7 +184,8 @@ if ($conn->query($sql) === TRUE) {
     }
     $total = $days * $price;
         
-        echo "<div class='response-form'>";
+     if(isset($price)){
+            echo "<div class='response-form'>";
             echo "<h4>"."Hi ".$_SESSION['firstName']." you are booking the ". $_SESSION['Hotel']."<br>"."</h4>";
             echo "<p>"."Number of Days:   ".$days."</p>";
             echo "<p>"."Daily Rate:   R"."$price"."</p>";
@@ -192,6 +193,8 @@ if ($conn->query($sql) === TRUE) {
             echo "<button class='submit-btn2'>confirm booking</button>";
     
         echo"</div>";
+
+    }
 
 $firstname = $_SESSION['firstName'];
 $lastname = $_SESSION['surName'];
